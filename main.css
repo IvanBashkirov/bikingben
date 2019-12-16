@@ -1,0 +1,135 @@
+.ben {
+  height: 300px;
+  width: 165px;
+  display: inline-block;
+  transform-origin: 53% 87%;
+  position: absolute;
+  left: 20%;
+  transition-duration: .1s;
+  top: 25%;
+}
+
+.unicycle {
+  width: 100%;
+  height: 100%;
+}
+
+.rock {
+  position: absolute;
+  top: 80%;
+  height: 40px;
+  animation-name: stone-animation;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+
+
+.rock img {
+  height: 100%;
+  width: auto;
+}
+.head-1 {
+  position: absolute;
+  left: 43%;
+  top: -3%;
+  height: 20%;
+  width: 27%;
+}
+
+#container {
+  margin: auto;
+  margin-top: 200px;
+  width: 1000px;
+  height: 480px;
+  text-align: right;
+  position: relative;
+  background: gray url(img/background.png) 0 0 repeat ;
+  background-size: contain;
+}
+
+#score-container {
+  width: 150px;
+  padding-top: 20px;
+  display: none;
+  text-align: left;
+}
+
+#container.playing #score-container {
+  display: inline-block;
+}
+
+#score-container h3 {
+  display: inline-block;
+}
+
+#game-end h1 {
+  display: inline-block;
+}
+
+#game-end h4 {
+  margin-top:0;
+}
+
+#game-start {
+  padding-top: 90px;
+  text-align: left;
+  display: none;
+  width: 300px;
+}
+
+.starting #game-start {
+  display: inline-block
+}
+
+#game-end {
+  padding-top: 90px;
+  text-align: left;
+  display: none;
+  width: 300px;
+}
+
+.finished #game-end {
+  display: inline-block;
+}
+
+#container.playing #game-start {
+  display: none;
+}
+
+#container.playing {
+  -webkit-animation: slide 1.5s linear infinite;
+}
+
+.jumping {
+  animation-name: jump;
+  animation-duration: .5s;
+}
+
+@keyframes stone-animation {
+  0% {
+    left: 1000px;
+  }
+
+  100% {
+    left: -100px;
+  }
+}
+
+@-webkit-keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: -825px 0; }
+}
+
+@keyframes jump {
+  0%, 100% {
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+
+  35%, 65% {
+  -webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1.79);
+  animation-timing-function: cubic-bezier(0, 0, 1, 1.79);
+    top: 5%
+  }
+
+}
