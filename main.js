@@ -31,7 +31,7 @@ function createElementFromHTML(htmlString) {
 function generateStone() {
   console.log('generating')
   if (stoneGenerated) return
-  if (Math.random() > 0.1) return
+  if (Math.random() > 0.9) return
   var rockElement = createElementFromHTML('<div class="rock"><img src="img/rock.png"></div>')
   container.appendChild(rockElement)
   stoneGenerated = true
