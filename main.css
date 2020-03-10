@@ -36,6 +36,14 @@
   width: 27%;
 }
 
+.hat {
+  position: absolute;
+  left: 27%;
+  top: -22%;
+  height: 26%;
+  width: 60%;
+}
+
 #container {
   margin: auto;
   margin-top: 200px;
