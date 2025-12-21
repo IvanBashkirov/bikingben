@@ -31,12 +31,12 @@ function createElementFromHTML(htmlString) {
 function generateStone() {
   console.log('generating')
   if (stoneGenerated) return
-  if (Math.random() > 0.1) return
+  if (Math.random() > 0.2) return
   var rockElement = createElementFromHTML('<div class="rock"><img src="img/rock.png"></div>')
   container.appendChild(rockElement)
   stoneGenerated = true
   window.setTimeout(function() {rockElement.remove()}, 2000)
-  window.setTimeout(function(){stoneGenerated = false}, 600)
+  window.setTimeout(function(){stoneGenerated = false}, 400)
 }
 
 function increaseScore() {
